@@ -26,7 +26,11 @@ function App() {
   ]);
 
   // Function to add a new workout
-  const addWorkout = () => {};
+  const addWorkout = (workout) => {
+    setWorkoutList([
+      ...workoutList, workout
+    ])
+  };
 
   return (
     <div className="App">
@@ -45,7 +49,7 @@ function App() {
             />
             <Route
               path="/create"
-              element={<CreateWorkout addWorkout={addWorkout} />}
+              element={<CreateWorkout addWorkout={addWorkout} workoutList={workoutList}/>}
             />
           </Routes>
         </main>
