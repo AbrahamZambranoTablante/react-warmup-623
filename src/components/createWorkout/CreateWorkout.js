@@ -9,7 +9,7 @@ const CreateWorkout = ({ addWorkout, workoutList }) => {
     name: "",
     date: "",
     duration: "",
-    caloriesBurned: ""
+    calories: ""
   });
 
   function handleChange (e) {
@@ -40,8 +40,8 @@ const CreateWorkout = ({ addWorkout, workoutList }) => {
         <input type="date" id="date" onChange={handleChange} value={workout.date}/><br/>
         <label htmlFor="durattion">Duration</label><br/>
         <input type="text" id="duration" onChange={handleChange} value={workout.duration}/><br/>
-        <label htmlFor="caloriesBurned">Calories Burned</label><br/>
-        <input type="text" id="caloriesBurned" onChange={handleChange} value={workout.caloriesBurned}/><br/>
+        <label htmlFor="calories">Calories Burned</label><br/>
+        <input type="text" id="calories" onChange={handleChange} value={workout.calories}/><br/>
         <button type="submit">Create</button>
       </form>
     </div>
